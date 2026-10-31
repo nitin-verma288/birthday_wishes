@@ -10,7 +10,7 @@ export default function SectionWelcome({ onOpenSurprise }) {
   }
 
   return (
-    <section className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center px-4 py-16 sm:py-20 overflow-hidden bg-gradient-to-b from-[#FFF8F3] via-[#FCE4EC] to-[#F8BBD0]/40">
+    <section className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center px-4 py-16 sm:py-20 overflow-x-clip bg-gradient-to-b from-[#FFF8F3] via-[#FCE4EC] to-[#F8BBD0]/40">
       {/* Soft Ambient Radiance */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[500px] md:w-[650px] h-[280px] sm:h-[500px] md:h-[650px] bg-gradient-to-tr from-[#F8BBD0]/50 to-[#FCE4EC]/70 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
 

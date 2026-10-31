@@ -19,7 +19,7 @@ export default function SectionCelebration() {
   ]
 
   return (
-    <section id="celebration-section" className="relative min-h-[90dvh] w-full flex flex-col items-center justify-center px-4 py-14 sm:py-20 overflow-hidden bg-gradient-to-b from-[#F8BBD0]/30 via-[#FFF8F3] to-[#FFF8F3]">
+    <section id="celebration-section" className="relative min-h-[90dvh] w-full flex flex-col items-center justify-center px-4 py-14 sm:py-20 overflow-x-clip bg-gradient-to-b from-[#F8BBD0]/30 via-[#FFF8F3] to-[#FFF8F3]">
       {/* Floating balloons in the background */}
       {balloons.map((b, idx) => (
         <motion.div

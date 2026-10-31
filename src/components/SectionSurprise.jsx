@@ -19,7 +19,7 @@ export default function SectionSurprise() {
   }
 
   return (
-    <section id="surprise-section" className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center px-4 py-14 sm:py-20 overflow-hidden bg-gradient-to-b from-[#FFF8F3] via-[#FCE4EC]/50 to-[#FFF8F3]">
+    <section id="surprise-section" className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center px-4 py-14 sm:py-20 overflow-x-clip bg-gradient-to-b from-[#FFF8F3] via-[#FCE4EC]/50 to-[#FFF8F3]">
       {/* Background radial glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-[500px] h-72 sm:h-[500px] bg-[#F8BBD0]/50 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
 

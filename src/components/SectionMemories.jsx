@@ -68,7 +68,7 @@ export default function SectionMemories() {
   }
 
   return (
-    <section id="memories-section" className="relative min-h-[100dvh] w-full px-4 sm:px-6 py-14 sm:py-20 overflow-hidden bg-gradient-to-b from-[#FFF8F3] via-[#FFFDF9] to-[#FFF8F3]">
+    <section id="memories-section" className="relative min-h-[100dvh] w-full px-4 sm:px-6 py-14 sm:py-20 overflow-x-clip bg-gradient-to-b from-[#FFF8F3] via-[#FFFDF9] to-[#FFF8F3]">
       {/* Background ambient glows */}
       <div className="absolute top-1/4 left-0 w-64 sm:w-80 h-64 sm:h-80 bg-[#FCE4EC]/50 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-0 w-64 sm:w-80 h-64 sm:h-80 bg-[#F8BBD0]/40 rounded-full blur-3xl pointer-events-none" />

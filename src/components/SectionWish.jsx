@@ -21,7 +21,7 @@ export default function SectionWish() {
   }
 
   return (
-    <section id="wish-section" className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center px-4 py-16 pb-36 sm:pb-44 overflow-hidden bg-gradient-to-b from-[#FFF8F3] via-[#FCE4EC]/60 to-[#F8BBD0]/40">
+    <section id="wish-section" className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center px-4 py-16 pb-36 sm:pb-44 overflow-x-clip bg-gradient-to-b from-[#FFF8F3] via-[#FCE4EC]/60 to-[#F8BBD0]/40">
       {/* Warm magical glow */}
       <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[550px] h-[280px] sm:h-[550px] rounded-full blur-3xl pointer-events-none transition-all duration-1000 ${
         candlesLit ? 'bg-[#FFD180]/35' : 'bg-[#F8BBD0]/30'

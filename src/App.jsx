@@ -50,7 +50,7 @@ export default function App() {
   }
 
   return (
-    <div className="relative min-h-screen bg-[#FFF8F3] text-[#3d2b33] overflow-x-hidden selection:bg-[#F8BBD0] selection:text-[#AD5577]">
+    <div className="relative min-h-screen bg-[#FFF8F3] text-[#3d2b33] overflow-x-clip selection:bg-[#F8BBD0] selection:text-[#AD5577]">
       {/* Continuous Ambient Romantic Particles & Sparkles */}
       <FloatingParticles />
 
