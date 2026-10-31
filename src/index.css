@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-handwriting: 'Dancing Script', cursive;
+  --font-script: 'Great Vibes', cursive;
+
+  --color-soft-pink: #FCE4EC;
+  --color-rose-pink: #F8BBD0;
+  --color-dark-rose: #AD5577;
+  --color-cream: #FFF8F3;
+  --color-deep-rose: #863654;
+  --color-blush: #FFEBF1;
+}
+
+/* Touch and Mobile Base Optimizations */
+html, body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  overscroll-behavior-y: none;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Safe Area Utilities */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 1rem);
+}
+
+/* Custom Typography Classes */
+.font-serif-title {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-dancing {
+  font-family: 'Dancing Script', cursive;
+}
+
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Glassmorphism & Soft Glow Effects */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(248, 187, 208, 0.45);
+}
+
+.glass-panel-subtle {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-rose {
+  background: rgba(252, 228, 236, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(173, 85, 119, 0.2);
+}
+
+.glow-soft-pink {
+  box-shadow: 0 10px 30px -5px rgba(248, 187, 208, 0.6), 0 0 15px rgba(173, 85, 119, 0.15);
+}
+
+.glow-rose-btn {
+  box-shadow: 0 10px 25px -4px rgba(173, 85, 119, 0.4), 0 4px 10px rgba(248, 187, 208, 0.5);
+}
+
+/* Polaroid Card Effect */
+.polaroid {
+  background: #ffffff;
+  padding: 12px 12px 18px 12px;
+  box-shadow: 0 12px 28px rgba(173, 85, 119, 0.12), 0 4px 10px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  touch-action: manipulation;
+}
+
+@media (min-width: 640px) {
+  .polaroid {
+    padding: 14px 14px 22px 14px;
+  }
+}
+
+.polaroid:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 20px 36px rgba(173, 85, 119, 0.2), 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Letter Paper Texture & Styling */
+.letter-paper {
+  background: #FFFDF9;
+  background-image: 
+    radial-gradient(#F8BBD0 0.75px, transparent 0.75px),
+    radial-gradient(#FCE4EC 0.75px, #FFFDF9 0.75px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+  box-shadow: 0 16px 40px rgba(173, 85, 119, 0.14), 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF8F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #F8BBD0;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #AD5577;
+}
+
+/* Candle Flame Animation */
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px #FFA726) drop-shadow(0 0 16px #FF7043);
+  }
+  25% {
+    transform: scale(1.06, 0.94) rotate(1.5deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 12px #FFB74D) drop-shadow(0 0 20px #FF5722);
+  }
+  50% {
+    transform: scale(0.95, 1.05) rotate(-1.5deg);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 7px #FFA726) drop-shadow(0 0 14px #FF7043);
+  }
+  75% {
+    transform: scale(1.03, 0.97) rotate(1deg);
+    opacity: 0.98;
+    filter: drop-shadow(0 0 10px #FFB74D) drop-shadow(0 0 18px #FF5722);
+  }
+}
+
+.candle-flame {
+  animation: flameFlicker 1.4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Floating Animation */
+@keyframes softFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1.5deg);
+  }
+}
+
+.animate-soft-float {
+  animation: softFloat 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.06);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
